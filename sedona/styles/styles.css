@@ -23,6 +23,21 @@ body {
 
 }
 
+.button {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #756157;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  padding: 8px 50px;
+
+}
+
 .page-header {
   color: #000000;
 }
@@ -63,4 +78,79 @@ body {
     font-weight: 700;
     text-transform: uppercase; /* капс */
     color: #000000;
+}
+
+.advantages {
+  font-family: "PT Sans", sans-serif;
+  text-align: center;
+}
+
+.advantages-item {
+  color: #000000;
+  background-color: rgba(131, 179, 211, 0.12);
+}
+
+.advantages-title {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+    text-transform: uppercase; /* капс */
+}
+
+.advantages-describtion {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333;
+}
+
+.advantages-item-white {
+  color: #FFFFFF;
+  background-color: #82B3D3;
+}
+
+.advantages-title-white {
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  text-transform: uppercase; /* капс */
+}
+
+.advantages-describtion-white {
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.subscribe {
+  text-align: center;
+  background-color: #333;
+}
+
+.subscribe-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase; /* капс */
+  color: #FFFFFF;
+}
+
+.subscribe-text {
+  color: #FFFFFF;
+}
+
+.page-footer {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.contacts-phone {
+  font-family: "PT Sans", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 40px;
+  text-transform: uppercase;
+  color: #000000;
+  text-decoration: dashed;
 }
