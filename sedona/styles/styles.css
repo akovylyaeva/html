@@ -1,3 +1,8 @@
+.visually-hidden {
+  position: fixed;
+  transform: scale(0);
+}
+
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
@@ -20,7 +25,6 @@ body {
   line-height: 26px;
   color: #333333;
   background: #FFFFFF;
-
 }
 
 .button {
@@ -34,6 +38,7 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding: 8px 50px;
+  border: none;
 }
 
 .button-small {
@@ -47,15 +52,34 @@ body {
   text-decoration: none;
   text-transform: uppercase;
   padding: 8px 50px;
+  border: none;
+}
+
+.button-view {
+  padding: 14px 12px;
+  color: #e5e5e5;
+  border: 2px solid;
+  text-decoration: none;
+}
+
+.button-circled {
+  color: #000;
+}
+
+.button-nav {
+  background-color: #756157;
+}
+
+.subscribe-button {
+  background-color: #82B3D3;
 }
 
 .button-not-color {
-  background-color: #000;
+  background: transparent;
 }
 
 .product-card-button {
   background-color: #756157;
-  text-decoration: dashed; 
 }
 
 .product-card-button-green {
@@ -220,20 +244,19 @@ body {
   text-transform: uppercase;
 }
 
-.product-list {
-  font-family: "PT Sans", sans-serif;
+.product-card {
   font-size: 18px;
   line-height: 21px;
   font-weight: 400;
   color: #333; 
+  background-color: #FFFFFF;
 }
 
 .product-card-link {
-  text-decoration: dashed; 
+  text-decoration: none;
 }
 
 .product-card-title {
-  font-family: "PT Sans", sans-serif;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
@@ -241,17 +264,14 @@ body {
 }
 
 .product-card-rating-text {
-  font-family: inherit;
   font-size: 16px;
   line-height: 20px;
-  font-weight: 400;
   text-align: center;
-  color: #333;
   background-color: #f2f2f2;
   text-transform: uppercase;
-  width: 140px;
-  height: 37px;
+  padding: 8px 22px;
 }
+
 
 .pagination-link {
   font-family: inherit;
@@ -262,10 +282,15 @@ body {
   color: #FFFFFF;
   background-color: #82b3d3;
   text-transform: uppercase;
-  text-decoration: dashed; 
+  text-decoration: none;
+  padding: 12px 24px; 
 }
 
 .pagination-current {
   color: #000;
   background-color: #f2f2f2;
+}
+
+.navigation-icon {
+  padding: 22px 12px;
 }
