@@ -33,9 +33,33 @@ body {
   background-color: #756157;
   text-decoration: none;
   text-transform: uppercase;
-
   padding: 8px 50px;
+}
 
+.button-small {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  text-align: center;
+  color: #ffffff;
+  background-color: #82B3D3;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 8px 50px;
+}
+
+.button-not-color {
+  background-color: #000;
+}
+
+.product-card-button {
+  background-color: #756157;
+  text-decoration: dashed; 
+}
+
+.product-card-button-green {
+  background-color: #7DB54F; 
 }
 
 .page-header {
@@ -153,4 +177,95 @@ body {
   text-transform: uppercase;
   color: #000000;
   text-decoration: dashed;
+}
+
+.catalog-filter {
+  color: #ffffff;
+  background-color: #333;
+}
+
+.catalog-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 60px;
+  line-height: 78px;
+  font-weight: 700;
+}
+
+.breadcrumbs {
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.catalog-products {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.catalog-filter-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 700;
+}
+
+.catalog-products-search {
+  font-family: "PT Sans", sans-serif;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product-list {
+  font-family: "PT Sans", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #333; 
+}
+
+.product-card-link {
+  text-decoration: dashed; 
+}
+
+.product-card-title {
+  font-family: "PT Sans", sans-serif;
+  font-size: 24px;
+  line-height: 28px;
+  font-weight: 700;
+  color: #000;
+}
+
+.product-card-rating-text {
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-align: center;
+  color: #333;
+  background-color: #f2f2f2;
+  text-transform: uppercase;
+  width: 140px;
+  height: 37px;
+}
+
+.pagination-link {
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #82b3d3;
+  text-transform: uppercase;
+  text-decoration: dashed; 
+}
+
+.pagination-current {
+  color: #000;
+  background-color: #f2f2f2;
 }
