@@ -1,11 +1,31 @@
-.visually-hidden {
-  position: fixed;
-  transform: scale(0);
+/* Colors */
+
+:root {
+  --white-color: #FFFFFF;
+  --black-color: #000000;
+  --blue-color: #82B3D3;
+  --main-color: #333333;
+  --brown-color: #756157;
 }
 
-div {
-  display: block;
+
+/* Visually-hidden */
+
+.visually-hidden {
+  position: absolute;
+  visibility: hidden;
 }
+
+
+/* ul */
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; /* убрать точку списков */
+}
+
+/* Fonts */
 
 @font-face {
   font-family: "PT Sans";
@@ -22,39 +42,52 @@ div {
   src: url("../fonts/pt-sans-bold.woff2") format("woff2");
   font-display: swap;
 }
-  
+
+/* Body */
+
 body {
+  margin: 0 auto;
+  width: 1200px;
+  
   font-family: "PT Sans", sans-serif;
   font-size: 22px;
   line-height: 26px;
-  color: #333333;
-  background: #FFFFFF;
+  font-weight: 400;
+  color: var(--main-color);
+  background: #f2f2f2;
 }
+
+
+/* Buttons */
 
 .button {
   font-family: inherit;
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
-  color: #ffffff;
-  background-color: #756157;
+  color: var(--white-color);
+  background-color: var(--brown-color);
   text-decoration: none;
   text-transform: uppercase;
   padding: 8px 50px;
   border: none;
+  border-radius: 4px;
 }
 
 .button-small {
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 700;
   text-align: center;
-  color: #ffffff;
-  background-color: #82B3D3;
+  color: var(--white-color);
+  background-color: var(--blue-color);
   text-decoration: none;
   text-transform: uppercase;
   padding: 8px 50px;
   border: none;
+  border-radius: 4px;
 }
 
 .button-view {
@@ -65,15 +98,16 @@ body {
 }
 
 .button-circled {
-  color: #000;
+  color: var(--black-color);
 }
 
 .button-nav {
-  background-color: #756157;
+  background-color: var(--brown-color);
 }
 
 .subscribe-button {
-  background-color: #82B3D3;
+  background-color: var(--blue-color);
+  border-radius: 0px 4px 4px 0px;
 }
 
 .button-not-color {
@@ -81,22 +115,50 @@ body {
 }
 
 .product-card-button {
-  background-color: #756157;
+  background-color: var(--brown-color);
 }
 
 .product-card-button-green {
   background-color: #7DB54F; 
 }
 
+
+/* Header */
+
+.page-header {
+  background-color: var(--white-color);
+  height: 64px;
+  padding: 0px 70px;
+}
+
 .navigation {
+  height: 64px;
   display: flex;
-  width: 1060px;
-  margin: 0px auto;
 }
 
 .navigation-list {
-  width: 339px;
-  margin: 0px;
+  display: flex;
+}
+
+.navigation-user {
+  display: flex;
+}
+
+.navigation-item {
+  padding: 20px 16px;
+}
+
+.navigation-item-icon {
+  padding: 22px 12px;
+}
+
+.navigation-item-button {
+  padding: 14px 0px 14px 20px;
+}
+
+.navigation-icon {
+  color: inherit;
+  text-decoration: none; /* подчеркивание */
 }
 
 .navigation-link {
@@ -104,20 +166,16 @@ body {
     line-height: 24px;
     font-weight: 700;
     color: inherit;
-    background-color: #FFFFFF;
     text-transform: capitalize; /* заглавные/маленькие буквы */
     text-decoration: none; /* подчеркивание */
     text-align: center;
 }
 
-.navigation-icon {
-  color: inherit;
-  padding: 22px 12px;
-  text-decoration: none; /* подчеркивание */
-}
+
+/* Index page */
 
 .main-index-welcome {
-    background-color: #FFFFFF;
+    background-color: var(--white-color);
     background-image: url("../images/index/index-background.jpg");
     background-size: 100% auto;
     background-repeat: no-repeat;
@@ -126,13 +184,22 @@ body {
     height: 485px;
 }
 
-.vector-welcome {
-    width: 100%;
-    display: block;    
+.logo {
+  padding: 51px 371px 82px 371px;
 }
+
+/*
+.vector-welcome {
+он где то на инф блоке
+}
+*/
+
+/* Information block */
 
 .information-block {
     text-align: center;
+    background-color: var(--white-color);
+    width: 1200px;
 }
 
 .information-block-title {
@@ -140,43 +207,71 @@ body {
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase; /* капс */
-    color: #000000;
+    color: var(--black-color);
 }
+
+.information-sedona {
+    padding: 69px 0px;
+    gap: 25px;
+}
+
+.information-visit {
+    padding: 64px 0px;
+    gap: 20px;
+}
+
+.information-interested {
+    padding: 96px 0px;
+}
+
+/* Advantages */
 
 .advantages {
   text-align: center;
   display: flex;
+  background-color: var(--white-color);
 }
 
 .advantages-item {
   background-color: rgba(131, 179, 211, 0.12);
-  width: 400px;
-  height: 385px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.advantages-first {
+  padding: 103px 85px;
+}
+
+.advantages-second {
+  padding: 80px 85px;
 }
 
 .advantages-title {
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
-    color: #000000;
+    color: var(--black-color);
     text-transform: uppercase; /* капс */
+    margin: 0;
 }
 
 .advantages-describtion {
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
+  margin: 0;
 }
 
 .advantages-item-white {
   display: flex;
-  color: #ffffff;
-  background-color: #82b3d3;
+  color: var(--white-color);
+  background-color: var(--blue-color);
 }
 
 .advantages-item-white .advantages-title {
-  color: #FFFFFF;
-  background-color: #82B3D3;
+  color: var(--white-color);
+  background-color: var(--blue-color);
 }
 
 .advantages-group {
@@ -188,16 +283,25 @@ body {
 }
 
 .advantages-item-light {
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
+
+.advantages-dividing-line {
+  display: block;
+  background: rgba(0, 0, 0, 0.30);
+  width: 60px;
+  height: 2px;
+}
+
+
+/* Subscribe */
 
 .subscribe {
   text-align: center;
-  background-color: #333;
+  background-color: var(--main-color);
   background-image: url(../images/index/subscribe-background.jpeg);
   background-repeat: no-repeat;
-  width: 1200px;
-  height: 412px;
+  padding: 96px 258px 104px 258px;
 }
 
 .subscribe-title {
@@ -205,69 +309,74 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase; /* капс */
-  color: #FFFFFF;
+  color: var(--white-color);
 }
 
 .subscribe-text {
-  color: #FFFFFF;
+  color: var(--white-color);
 }
 
-.page-footer {
-  color: #000000;
-  background-color: #FFFFFF;
-  display: flex;
+.subscribe-field {
+  padding: 12px 20px;
+  border-radius: 4px 0px 0px 4px;
+  background: #F2F2F2;
+  border: none;
+
+  font-family: "PT Sans";
+  font-size: 18px;
+  line-height: 24px;
 }
 
-.contacts-phone {
-  font-size: 40px;
-  font-weight: 400;
-  line-height: 40px;
-  text-transform: uppercase;
-  color: #000000;
-  text-decoration: none;
-}
 
-.catalog-filter {
-  color: #ffffff;
+/* Catalog page */
+
+.catalog {
+  background-color: var(--white-color);
 }
 
 .filter {
-  background-color: #333;
+  background-color: var(--main-color);
   background-image: url(../images/catalog/filters-background.jpeg);
   background-repeat: no-repeat;
-  width: 1200px;
-  height: 412px;
-}
-
-.catalog-filter {
-  display: flex;
+  padding: 35px 70px 70px 70px;
+  color: var(--white-color);
 }
 
 .catalog-title {
   font-size: 60px;
   line-height: 78px;
+  font-weight: 700;
+  margin: 0px;
 }
+
+.catalog-filter {
+  display: flex;
+}
+
+
+/* Breadcrumbs */
 
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
-  font-weight: 400;
+  /* display: flex; ???*/
 }
 
 .catalog-products {
   font-size: 18px;
   line-height: 23px;
-  font-weight: 400;
 }
 
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
+  font-weight: 700;
 }
 
 .catalog-products-search {
   font-size: 30px;
   line-height: 36px;
+  font-weight: 700;
   text-transform: uppercase;
 }
 
@@ -275,8 +384,7 @@ body {
 .product-card {
   font-size: 18px;
   line-height: 21px;
-  font-weight: 400;
-  background-color: #FFFFFF;
+  background-color: var(--white-color);
 }
 
 .product-card-link {
@@ -286,7 +394,8 @@ body {
 .product-card-title {
   font-size: 24px;
   line-height: 28px;
-  color: #000;
+  font-weight: 700;
+  color: var(--black-color);
 }
 
 .product-card-rating-text {
@@ -296,21 +405,47 @@ body {
   background-color: #f2f2f2;
   text-transform: uppercase;
   padding: 8px 22px;
+  border-radius: 4px;
 }
 
+
+/* Pagination */
 
 .pagination-link {
   font-size: 20px;
   line-height: 36px;
+  font-weight: 700;
   text-align: center;
-  color: #FFFFFF;
-  background-color: #82b3d3;
+  color: var(--white-color);
+  background-color: var(--blue-color);
   text-transform: uppercase;
   text-decoration: none;
   padding: 12px 24px; 
+  border-radius: 4px;
 }
 
 .pagination-current {
-  color: #000;
+  color: var(--black-color);
   background-color: #f2f2f2;
+}
+
+
+/* Footer */
+
+.page-footer {
+  color: var(--black-color);
+  background-color: var(--white-color);
+  display: flex;
+  padding: 40px 70px 30px 70px;
+}
+
+.contacts-phone {
+  font-size: 40px;
+  line-height: 40px;
+  color: var(--black-color);
+  text-decoration: none;
+}
+
+.footer-social-list {
+  display: flex;
 }
