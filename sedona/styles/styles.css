@@ -1,3 +1,11 @@
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
 /* Colors */
 
 :root {
@@ -96,12 +104,11 @@ body {
   border: 2px solid;
   text-decoration: none;
   border-radius: 4px;
-
-  /* очень нерпавильно наверное но размер подогнала */
-  padding: 10px 0px 0px 0px;
-  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
   width: 44px;
-  text-align: center;
 }
 
 .button-circled {
@@ -198,7 +205,7 @@ body {
 }
 
 .logo {
-  padding: 51px 371px 82px 371px;
+  margin: 51px 0px 25px 0px;
 }
 
 /*
@@ -507,6 +514,7 @@ body {
   flex-direction: column;
   padding: 20px;
   gap: 16px;
+  height: 438px;
 }
 
 .product-card-link {
@@ -544,6 +552,7 @@ body {
   align-items: center;
   gap: 6px;
   width: 140px;
+  height: 37px;
 }
 
 .product-card-rating-text {
@@ -555,6 +564,7 @@ body {
   padding: 8px 22px;
   border-radius: 4px;
   width: 140px;
+  height: auto;
 }
 
 
