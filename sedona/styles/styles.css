@@ -1,3 +1,11 @@
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+
 /* Colors */
 
 :root {
@@ -24,6 +32,7 @@ ul {
   margin: 0;
   list-style: none; /* убрать точку списков */
 }
+
 
 /* Fonts */
 
@@ -91,10 +100,15 @@ body {
 }
 
 .button-view {
-  padding: 14px 12px;
   color: #e5e5e5;
   border: 2px solid;
   text-decoration: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  width: 44px;
 }
 
 .button-circled {
@@ -116,10 +130,16 @@ body {
 
 .product-card-button {
   background-color: var(--brown-color);
+  padding: 8px; /*не понимаю как ровно сделать*/
+  width: 140px;
 }
 
 .product-card-button-green {
   background-color: #7DB54F; 
+}
+
+.product-card-button-blue {
+  background-color: var(--blue-color); 
 }
 
 
@@ -185,7 +205,7 @@ body {
 }
 
 .logo {
-  padding: 51px 371px 82px 371px;
+  margin: 51px 0px 25px 0px;
 }
 
 /*
@@ -287,7 +307,6 @@ body {
 }
 
 .advantages-dividing-line {
-  display: block;
   background: rgba(0, 0, 0, 0.30);
   width: 60px;
   height: 2px;
@@ -302,6 +321,13 @@ body {
   background-image: url(../images/index/subscribe-background.jpeg);
   background-repeat: no-repeat;
   padding: 96px 258px 104px 258px;
+  gap: 54px;
+  display: grid;
+}
+
+.subscribe-texts {
+  display: grid;
+  gap: 20px;
 }
 
 .subscribe-title {
@@ -310,10 +336,12 @@ body {
   font-weight: 700;
   text-transform: uppercase; /* капс */
   color: var(--white-color);
+  margin: 0;
 }
 
 .subscribe-text {
   color: var(--white-color);
+  margin: 0;
 }
 
 .subscribe-field {
@@ -327,12 +355,22 @@ body {
   line-height: 24px;
 }
 
+.subscribe-catalog {
+  background-color: var(--white-color);
+  background-image: none;
+  color: var(--black-color);
+}
+
+.subscribe-title-catalog {
+  color: var(--black-color);
+}
+
+.subscribe-text-catalog {
+  color: var(--main-color);
+}
+
 
 /* Catalog page */
-
-.catalog {
-  background-color: var(--white-color);
-}
 
 .filter {
   background-color: var(--main-color);
@@ -359,18 +397,69 @@ body {
 .breadcrumbs {
   font-size: 16px;
   line-height: 21px;
-  /* display: flex; ???*/
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 0px 40px 0px;
 }
+
+.breadcrumbs-img {
+  display: block;
+}
+
+/* Filter */
 
 .catalog-products {
   font-size: 18px;
   line-height: 23px;
 }
 
+.catalog-filter-side {
+  gap: 70px;
+  display: flex;
+}
+
+.catalog-filter-buttons {
+  display: grid;
+  gap: 32px;
+  padding: 56px 0px 0px 0px;
+}
+
+.catalog-filter-group {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-filter-list {
+  gap: 16px;
+  display: grid;
+}
+
 .catalog-filter-title {
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
+  padding: 0px 0px 32px 0px;
+}
+
+
+/* Catalog */
+
+.catalog {
+  background-color: var(--white-color);
+  padding: 50px 70px 60px 70px;
+  display: grid;
+  gap: 40px;
+}
+
+
+/* Sorting */
+
+.catalog-sorting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .catalog-products-search {
@@ -378,17 +467,60 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
+  margin: 0;
 }
 
+.catalog-sorting-group {
+  display: flex;
+  gap: 70px;
+}
+
+.select-control {
+  width: 292px;
+  padding: 11px 20px;
+  border-radius: 4px;
+  border: 2px solid #E5E5E5;
+
+  color: var(--main-color);
+  font-family: "PT Sans";
+  font-size: 18px;
+}
+
+.sorting-view-buttons {
+  gap: 8px;
+  display: flex;
+}
+
+
+
+/* Product list */
+
+.product-list {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 340px 340px 340px; /* у карточек в высоту 1 лишний пиксель, не понимаю */
+}
+
+
+/* Product card */
 
 .product-card {
   font-size: 18px;
   line-height: 21px;
   background-color: var(--white-color);
+  border-radius: 4px;
+  border: 1px solid #E6E6E6;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 16px;
+  height: 438px;
 }
 
 .product-card-link {
   text-decoration: none;
+  gap: 16px;
+  display: grid;
 }
 
 .product-card-title {
@@ -396,6 +528,31 @@ body {
   line-height: 28px;
   font-weight: 700;
   color: var(--black-color);
+  margin: 0;
+}
+
+.product-card-texts {
+  display: flex;
+  justify-content: space-between;
+  width: 300px;
+}
+
+.product-card-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.product-card-rating {
+  display: flex;
+  gap: 20px;
+}
+
+.rating-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 140px;
+  height: 37px;
 }
 
 .product-card-rating-text {
@@ -406,10 +563,25 @@ body {
   text-transform: uppercase;
   padding: 8px 22px;
   border-radius: 4px;
+  width: 140px;
+  height: auto;
 }
 
 
+/* Dividing line */
+
+.page-dividing-line {
+  background: #E6E6E6;
+  width: 1060px;
+  height: 1px;
+}
+
 /* Pagination */
+
+.pagination {
+  display: flex;
+  gap: 8px;
+}
 
 .pagination-link {
   font-size: 20px;
